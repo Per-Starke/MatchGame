@@ -2,6 +2,7 @@ __author__ = 'Per'
 
 from Match_class import Match
 
+
 class Player(object):
 
     def __init__(self, name, number, assignedMatch):
@@ -25,6 +26,6 @@ class Player(object):
     def getLengthFromAssignedMatch(self):
         lengthFromAssignedMatch = self.AssignedMatch.getLength()
 
-    def assignVictory(self):
-        //
+    #def assignVictory(self):
+        #
 
