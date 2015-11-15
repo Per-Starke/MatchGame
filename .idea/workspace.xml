@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18761bf2-3253-4eb9-82be-53aa5e13a24c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Match_class.py" afterPath="$PROJECT_DIR$/src/Match_class.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player_class.py" afterPath="$PROJECT_DIR$/src/Player_class.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignLengthAndVictory.py" afterPath="$PROJECT_DIR$/src/assignLengthAndVictory.py" />
     </list>
     <ignored path="MatchGame.iws" />
@@ -30,8 +28,8 @@
       <file leaf-file-name="assignLengthAndVictory.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/assignLengthAndVictory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25167784" vertical-offset="0" max-vertical-offset="596">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.45302013" vertical-offset="0" max-vertical-offset="596">
+              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -528,8 +526,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignLengthAndVictory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25167784" vertical-offset="0" max-vertical-offset="596">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.45302013" vertical-offset="0" max-vertical-offset="596">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
           <folding />
         </state>
       </provider>

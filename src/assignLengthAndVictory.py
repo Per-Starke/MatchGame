@@ -8,10 +8,19 @@ numberOfPlayers = input("how many players? ")
 
 
 
-def defPlayers():
+def defListOfPlayers():
     listOfPlayers = []
     for i in range (0, numberOfPlayers):
-        playerName = str(input("Player name: "))
+        playerName = raw_input("Player name: ")
         matchToAssingToPlayer = Match(i)
         player_i = Player(playerName, i, matchToAssingToPlayer)
         listOfPlayers.append(player_i)
+    return listOfPlayers
+
+def 
+
+listOfPlayers = defListOfPlayers()
+for player in listOfPlayers:
+    print(player.getName(), player.getNumber())
+
+
