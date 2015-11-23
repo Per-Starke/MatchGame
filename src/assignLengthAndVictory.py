@@ -8,7 +8,7 @@ numberOfPlayers = input("how many players? ")
 
 
 
-def defListOfPlayers():
+def defineListOfPlayers():
     listOfPlayers = []
     for i in range (0, numberOfPlayers):
         playerName = raw_input("Player name: ")
@@ -19,7 +19,7 @@ def defListOfPlayers():
 
 
 
-listOfPlayers = defListOfPlayers()
+listOfPlayers = defineListOfPlayers()
 for player in listOfPlayers:
     print(player.getName(), player.getNumber())
 
