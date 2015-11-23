@@ -19,8 +19,9 @@ def defineListOfPlayers():
 
 def defineListOfMatches():
     listOfMatches = []
-    for i in range (0, numberOfPlayers):
-        match = player.getAssignedMatch
+    listOfPlayers = defineListOfPlayers()
+    for player in listOfPlayers:
+        match = player.getAssignedMatch()
         listOfMatches.append(match)
     return listOfMatches
 
