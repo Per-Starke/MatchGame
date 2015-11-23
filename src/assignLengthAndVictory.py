@@ -17,7 +17,7 @@ def defListOfPlayers():
         listOfPlayers.append(player_i)
     return listOfPlayers
 
-def 
+
 
 listOfPlayers = defListOfPlayers()
 for player in listOfPlayers:
