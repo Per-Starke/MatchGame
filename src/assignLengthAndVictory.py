@@ -17,6 +17,16 @@ def defineListOfPlayers():
         listOfPlayers.append(player_i)
     return listOfPlayers
 
+def defineListOfMatches():
+    listOfMatches = []
+    for i in range (0, numberOfPlayers):
+        match = player.getAssignedMatch
+        listOfMatches.append(match)
+    return listOfMatches
+
+listOfMatches = defineListOfMatches()
+for match in listOfMatches:
+        print("Match Nr: ", match.getNumber(), "Match length: ", match.getLength())
 
 
 listOfPlayers = defineListOfPlayers()
