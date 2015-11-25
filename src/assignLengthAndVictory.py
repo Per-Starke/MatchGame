@@ -9,29 +9,38 @@ numberOfPlayers = input("how many players? ")
 
 
 def defineListOfPlayers():
+
     listOfPlayers = []
+
     for i in range (0, numberOfPlayers):
         playerName = raw_input("Player name: ")
         matchToAssingToPlayer = Match(i)
         player_i = Player(playerName, i, matchToAssingToPlayer)
         listOfPlayers.append(player_i)
+
     return listOfPlayers
 
-def defineListOfMatches():
+def defineListOfMatches(listOfPlayers):
+
     listOfMatches = []
-    listOfPlayers = defineListOfPlayers()
+
     for player in listOfPlayers:
         match = player.getAssignedMatch()
         listOfMatches.append(match)
-    return listOfMatches
 
-listOfMatches = defineListOfMatches()
-for match in listOfMatches:
-        print("Match Nr: ", match.getNumber(), "Match length: ", match.getLength())
+    return listOfMatches
 
 
 listOfPlayers = defineListOfPlayers()
+
+listOfMatches = defineListOfMatches(listOfPlayers)
+
+
 for player in listOfPlayers:
-    print(player.getName(), player.getNumber())
+    match = player.getAssignedMatch()
+    matchNr = match.getNumber()
+    matchLength = match.getLength()
 
-
+    print("Player name: ", player.getName(), "Player Nr: ", player.getNumber())
+    print("Match Nr: ", matchNr, "Match length: ", matchLength)
+    print("")

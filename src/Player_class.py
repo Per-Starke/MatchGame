@@ -23,9 +23,6 @@ class Player(object):
     def getVictory(self):
         return self.Victory
 
-    def getLengthFromAssignedMatch(self):
-        lengthFromAssignedMatch = self.AssignedMatch.getLength()
-
     #def assignVictory(self):
         #
 
