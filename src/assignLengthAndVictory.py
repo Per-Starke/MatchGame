@@ -44,3 +44,9 @@ for player in listOfPlayers:
     print("Player name: ", player.getName(), "Player Nr: ", player.getNumber())
     print("Match Nr: ", matchNr, "Match length: ", matchLength)
     print("")
+
+
+print("")
+print(listOfMatches)
+print("")
+print(listOfPlayers)
