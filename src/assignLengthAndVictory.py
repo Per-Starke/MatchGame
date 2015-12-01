@@ -65,7 +65,8 @@ listOfPlayers = defineListOfPlayers()
 
 listOfMatches = defineListOfMatches(listOfPlayers)
 
-listOfMatches = assignLengthToMatches(listOfMatches, 2)
+nrOfWinners = input("Nr of winners: ")
+listOfMatches = assignLengthToMatches(listOfMatches, nrOfWinners)
 
 shuffleListOfMatchesAndAssignToPlayers(listOfMatches, listOfPlayers)
 
