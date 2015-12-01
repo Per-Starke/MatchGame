@@ -30,11 +30,13 @@ def defineListOfMatches(listOfPlayers):
 
     return listOfMatches
 
-def assignLengthToMatches(listOfMatches):
+def assignLengthToMatches(listOfMatches, nrOfLongMatches):
     for match in listOfMatches:
         match.Length = False
-    listOfMatches[0].Length = True
+    for i in range (0, nrOfLongMatches):
+        listOfMatches[i].Length = True
     return listOfMatches
+
 
 def shuffleListOfMatchesAndAssignToPlayers(listOfMatches, listOfPlayers):
     random.shuffle(listOfMatches)
@@ -44,28 +46,32 @@ def shuffleListOfMatchesAndAssignToPlayers(listOfMatches, listOfPlayers):
         i += 1
 
 def assignVictory(listOfPlayers):
+    listOfWinners = []
     for player in listOfPlayers:
         if player.AssignedMatch.getLength() == True:
             player.Victory = True
-            winner = player
+            listOfWinners.append(player)
         else:
             player.Victory = False
-    return winner
+    return listOfWinners
+
+def printWinners(listOfWinners):
+    for winner in listOfWinners:
+        print("")
+        print("One Winner is '" + winner.getName() + "' with the player-number " + str(winner.getNumber()))
+        print("")
 
 listOfPlayers = defineListOfPlayers()
 
 listOfMatches = defineListOfMatches(listOfPlayers)
 
-listOfMatches = assignLengthToMatches(listOfMatches)
+listOfMatches = assignLengthToMatches(listOfMatches, 2)
 
 shuffleListOfMatchesAndAssignToPlayers(listOfMatches, listOfPlayers)
 
-winner = assignVictory(listOfPlayers)
+listOfWinners = assignVictory(listOfPlayers)
 
-print("")
-print("The winner is " + winner.getName())
-print("")
-
+printWinners(listOfWinners)
 
 
 for player in listOfPlayers:
