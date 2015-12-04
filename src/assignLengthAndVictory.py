@@ -57,15 +57,22 @@ def assignVictory(listOfPlayers):
 
 def printWinners(listOfWinners):
     for winner in listOfWinners:
-        print("")
         print("One Winner is '" + winner.getName() + "' with the player-number " + str(winner.getNumber()))
-        print("")
+
+def printLoosers(listOfPlayers):
+    for player in listOfPlayers:
+        if player.AssignedMatch.getLength() != True:
+            print("one Looser is '" + player.getName() + "' with the player-number " + str(player.getNumber()))
+
 
 listOfPlayers = defineListOfPlayers()
 
 listOfMatches = defineListOfMatches(listOfPlayers)
 
 nrOfWinners = input("Nr of winners: ")
+
+print("")
+
 listOfMatches = assignLengthToMatches(listOfMatches, nrOfWinners)
 
 shuffleListOfMatchesAndAssignToPlayers(listOfMatches, listOfPlayers)
@@ -73,13 +80,14 @@ shuffleListOfMatchesAndAssignToPlayers(listOfMatches, listOfPlayers)
 listOfWinners = assignVictory(listOfPlayers)
 
 printWinners(listOfWinners)
+print("")
+printLoosers(listOfPlayers)
 
-
-for player in listOfPlayers:
-    match = player.getAssignedMatch()
-    matchNr = match.getNumber()
-    matchLength = match.getLength()
-
-    print("Player name: ", player.getName(), "Player Nr: ", player.getNumber())
-    print("Match Nr: ", matchNr, "Match length: ", matchLength)
-    print("")
+# for player in listOfPlayers:
+#     match = player.getAssignedMatch()
+#     matchNr = match.getNumber()
+#     matchLength = match.getLength()
+#
+#     print("Player name: ", player.getName(), "Player Nr: ", player.getNumber())
+#     print("Match Nr: ", matchNr, "Match length: ", matchLength)
+#     print("")
