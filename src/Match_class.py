@@ -4,7 +4,7 @@ class Match (object):
 
     def __init__(self, number):
         self.Number = number
-        self.Length = None
+        self.Length = None   # will be assigned in assignLengthToMatches function
 
     def getNumber(self):
         return self.Number

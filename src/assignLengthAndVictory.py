@@ -4,11 +4,11 @@ from Match_class import Match
 from Player_class import Player
 import random
 
+
 numberOfPlayers = input("how many players? ")
 
 
-
-def defineListOfPlayers():
+def defineListOfPlayers():   # returs a list of Objects of Player_class, name = input
 
     listOfPlayers = []
 
@@ -20,7 +20,7 @@ def defineListOfPlayers():
 
     return listOfPlayers
 
-def defineListOfMatches(listOfPlayers):
+def defineListOfMatches(listOfPlayers):  # returs a list of Objects of Match_class, assigns Match x to Player x
 
     listOfMatches = []
 
@@ -30,15 +30,15 @@ def defineListOfMatches(listOfPlayers):
 
     return listOfMatches
 
-def assignLengthToMatches(listOfMatches, nrOfLongMatches):
-    for match in listOfMatches:
+def assignLengthToMatches(listOfMatches, nrOfLongMatches):  # for a given number of winners, in range 0 to x, length = True will be assigned to list of Matches
+    for match in listOfMatches:  # first, all Length = False
         match.Length = False
-    for i in range (0, nrOfLongMatches):
+    for i in range (0, nrOfLongMatches):  # for given number, Length = True
         listOfMatches[i].Length = True
     return listOfMatches
 
 
-def shuffleListOfMatchesAndAssignToPlayers(listOfMatches, listOfPlayers):
+def shuffleListOfMatchesAndAssignToPlayers(listOfMatches, listOfPlayers):  # randomly shuffles 
     random.shuffle(listOfMatches)
     i = 0
     for match in listOfMatches:
@@ -49,10 +49,7 @@ def assignVictory(listOfPlayers):
     listOfWinners = []
     for player in listOfPlayers:
         if player.AssignedMatch.getLength() == True:
-            player.Victory = True
             listOfWinners.append(player)
-        else:
-            player.Victory = False
     return listOfWinners
 
 def printWinners(listOfWinners):
@@ -62,7 +59,7 @@ def printWinners(listOfWinners):
 def printLoosers(listOfPlayers):
     for player in listOfPlayers:
         if player.AssignedMatch.getLength() != True:
-            print("one Looser is '" + player.getName() + "' with the player-number " + str(player.getNumber()))
+            print("One Looser is '" + player.getName() + "' with the player-number " + str(player.getNumber()))
 
 
 listOfPlayers = defineListOfPlayers()

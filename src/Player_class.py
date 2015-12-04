@@ -8,8 +8,7 @@ class Player(object):
     def __init__(self, name, number, assignedMatch):
         self.Name = name
         self.Number = number
-        self.AssignedMatch = assignedMatch
-        self.Victory = None
+        self.AssignedMatch = assignedMatch   # Object of Match.class will be assigned here
 
     def getName(self):
         return self.Name
@@ -19,10 +18,4 @@ class Player(object):
 
     def getAssignedMatch(self):
         return self.AssignedMatch
-
-    def getVictory(self):
-        return self.Victory
-
-    #def assignVictory(self):
-        #
 
